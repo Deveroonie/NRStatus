@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function TubeStatus() {
+function Status() {
   const [response, setResponse] = useState([]);
 
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await axios.get("https://api.tfl.gov.uk/line/mode/tube/status");
+        const response = await axios.get("https://api.tfl.gov.uk/line/mode/national-rail/status");
         setResponse(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -48,4 +48,4 @@ function TubeStatus() {
   );
 }
 
-export default TubeStatus;
+export default Status;
