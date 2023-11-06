@@ -39,7 +39,7 @@ function Status() {
           </div>
           {expandedLine === data.id && (
             <div className="mt-2 stnm text-lg">
-              <p><a href="{data.lineStatuses[0].reason || ""}">{data.lineStatuses[0].reason || "Good Service"}</a></p>
+              <p><a href={data.lineStatuses[0].reason || ""}>{data.lineStatuses[0].reason || "Good Service"}</a></p>
             </div>
           )}
         </div>
